@@ -1,0 +1,126 @@
+#nav-icon4 {
+  float: left;
+  width: 60px;
+  height: 45px;
+  position: relative;
+  margin-left: 20px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #000;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .15s ease-in;
+  -moz-transition: .15s ease-in;
+  -o-transition: .15s ease-in;
+  transition: .15s ease-in;
+}
+
+#nav-icon4.open span {
+  background: #fff;
+}
+
+#nav-icon4 span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(2) {
+  top: 18px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transition: .01s ease-in;
+  -moz-transition: .01s ease-in;
+  -o-transition: .01s ease-in;
+  transition: .01s ease-in;
+}
+
+#nav-icon4 span:nth-child(3) {
+  top: 36px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon4.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+
+#nav-icon4.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#nav-icon4.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 39px;
+  left: 8px;
+}
+
+aside {
+  float: right;
+  padding: 15px;
+  ul {
+    display: none;
+    margin: 70px 0;
+    padding: 0;
+    text-align: center;
+    li {
+      color: #fff;
+      font-size: 4rem;
+      font-weight: lighter;
+      list-style-type: none;
+    }
+  }
+}
+
+aside.open {
+  background: #a4dc34;
+  height: 100vh;
+  width: 100vw;
+  animation: slideLeft 1s;
+  ul {
+    display: block;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
