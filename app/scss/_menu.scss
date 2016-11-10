@@ -1,9 +1,10 @@
 #nav-icon4 {
-  float: left;
+  float: right;
   width: 60px;
   height: 45px;
-  position: relative;
-  margin-left: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -13,6 +14,7 @@
   -o-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
   cursor: pointer;
+  z-index: 10;
 }
 
 #nav-icon4 span {
@@ -32,10 +34,6 @@
   -moz-transition: .15s ease-in;
   -o-transition: .15s ease-in;
   transition: .15s ease-in;
-}
-
-#nav-icon4.open span {
-  background: #fff;
 }
 
 #nav-icon4 span:nth-child(1) {
@@ -98,7 +96,6 @@ aside {
     padding: 0;
     text-align: center;
     li {
-      color: #fff;
       font-size: 4rem;
       font-weight: lighter;
       list-style-type: none;
@@ -107,12 +104,29 @@ aside {
 }
 
 aside.open {
-  background: #a4dc34;
+  background: #fff;
   height: 100vh;
   width: 100vw;
-  animation: slideLeft 1s;
+  animation: slideLeft 0.5s;
   ul {
     display: block;
+    li {
+      &:nth-child(1) {
+        animation: slideLeft 0.3s;
+      }
+      &:nth-child(2) {
+        animation: slideLeft 0.5s;
+      }
+      &:nth-child(3) {
+        animation: slideLeft 0.7s;
+      }
+      &:nth-child(4) {
+        animation: slideLeft 0.8s;
+      }
+      &:nth-child(5) {
+        animation: slideLeft 1s;
+      }
+    }
   }
 }
 

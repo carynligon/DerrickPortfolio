@@ -14,20 +14,22 @@ class Menu extends React.Component {
       openClassName = 'open'
     }
     return (
-      <aside className={openClassName}>
+      <div className="menu-wrapper">
         <div onClick={this.hamburgerClick.bind(this)} id="nav-icon4" className={openClassName}>
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <ul className="menu=list">
-          <li>Link</li>
-          <li>Link</li>
-          <li>Link</li>
-          <li>Link</li>
-          <li>Link</li>
-        </ul>
-      </aside>
+        <aside className={openClassName}>
+          <ul className="menu=list">
+            <li>Link</li>
+            <li>Link</li>
+            <li>Link</li>
+            <li>Link</li>
+            <li>Link</li>
+          </ul>
+        </aside>
+      </div>
       );
   }
 }
