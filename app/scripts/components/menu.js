@@ -46,11 +46,11 @@ class Menu extends React.Component {
       </aside></div>)
     } else {
       menu = (<ul className="menu-list large-screen-nav">
-        <li>Link</li>
-        <li>Link</li>
-        <li>Link</li>
-        <li>Link</li>
-        <li>Link</li>
+      <li>Work</li>
+      <li>About</li>
+      <li><a target="_blank" href="https://twitter.com/derrickligon">Twitter</a></li>
+      <li><a target="_blank" href="https://dribbble.com/derrickligon">Dribbble</a></li>
+      <li><a target="_blank" href="https://www.instagram.com/derrickligon/">Instagram</a></li>
       </ul>)
     }
     return (
