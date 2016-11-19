@@ -6,6 +6,7 @@ class ProjectPreview extends React.Component {
     super(props);
   }
   goToProject() {
+    console.log(this.props);
     browserHistory.push(`/project/${this.props.data.id}`)
   }
   render() {

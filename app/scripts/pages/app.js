@@ -9,6 +9,7 @@ class App extends React.Component {
     super(props);
   }
   render() {
+    console.log(this.state);
     return (
       <main>
         <Menu/>

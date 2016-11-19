@@ -1,0 +1,39 @@
+.project-page {
+  h2 {
+    font-size: 3.5rem;
+    font-weight: lighter;
+    text-align: center;
+  }
+  h3 {
+    font-size: 2rem;
+    font-weight: lighter;
+    text-align: center;
+  }
+  .project-image {
+    background: $gray;
+    height: 500px;
+    width: 100%;
+  }
+  p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    margin: 0;
+    padding: 2.5rem;
+  }
+  button {
+    background: $black;
+    border: 4px solid $black;
+    color: $white;
+    display: block;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    padding: 2rem;
+    transition: all 0.5s;
+    width: 220px;
+    &:hover {
+      background: none;
+      color: $black;
+      cursor: pointer;
+    }
+  }
+}
