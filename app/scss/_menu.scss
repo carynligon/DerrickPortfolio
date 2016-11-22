@@ -177,3 +177,13 @@ aside.open {
     transform: translateX(0);
   }
 }
+
+@media (min-width: 800px) {
+  .menu-wrapper {
+    .large-screen-nav {
+      li.social {
+        display: none;
+      }
+    }
+  }
+}
