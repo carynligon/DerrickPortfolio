@@ -20,7 +20,10 @@ class Menu extends React.Component {
     }
   }
   componentDidMount() {
-    window.addEventListener('resize', this.handleResize.bind(this))
+    window.addEventListener('resize', this.handleResize.bind(this));
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize.bind(this));
   }
   render() {
     let openClassName;

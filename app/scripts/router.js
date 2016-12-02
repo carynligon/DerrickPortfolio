@@ -9,6 +9,7 @@ import projectView from './Pages/projectView';
 const router = (
   <Router history={browserHistory}>
     <Route path="/" component={App}/>
+    <Route path="/project/:projectId" component={projectView}/>
   </Router>
 );
 

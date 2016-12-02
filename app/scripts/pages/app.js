@@ -12,7 +12,6 @@ class App extends React.Component {
     this.state = {showButton: false};
   }
   handleScroll() {
-    console.dir(document.body.scrollTop);
     if (document.body.scrollTop >= 400) {
       this.setState({showButton: true});
     }

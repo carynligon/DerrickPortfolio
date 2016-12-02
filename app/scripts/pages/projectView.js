@@ -18,12 +18,14 @@ class ProjectView extends React.Component {
       <main className="project-page">
         <h2>{this.state.project.name}</h2>
         <h3>{this.state.project.labels.map((label) => label + ' ')}</h3>
-        <div className="project-image">
+        <div className="project-image" style={{backgroundImage:`url(${this.state.project.images[0]})`}}>
         </div>
         <p>{this.state.project.firstDescription}</p>
-        <div className="project-image">
+        <div className="project-image" style={{backgroundImage:`url(${this.state.project.images[1]})`}}>
         </div>
         <p>{this.state.project.secondDescription}</p>
+        <div className="project-image" style={{backgroundImage:`url(${this.state.project.images[2]})`}}>
+        </div>
         <button className="back-all-work" onClick={this.goHome.bind(this)}>Back to all work</button>
       </main>
     )
