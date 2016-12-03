@@ -9,21 +9,8 @@ import BackToTop from '../components/backToTop';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {showButton: false};
-  }
-  handleScroll() {
-    if (document.body.scrollTop >= 400) {
-      this.setState({showButton: true});
-    }
-  }
-  componentDidMount() {
-    document.addEventListener('scroll', this.handleScroll.bind(this))
   }
   render() {
-    let backToTop;
-    if (this.state.showButton) {
-      backToTop = <BackToTop/>
-    }
     return (
       <main>
         <Menu/>
@@ -34,7 +21,6 @@ class App extends React.Component {
           <ProjectPreview data={data[3]}/>
         </div>
         <Footer/>
-        {backToTop}
       </main>
       );
   }
