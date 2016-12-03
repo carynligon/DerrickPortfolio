@@ -13,7 +13,6 @@ class ProjectView extends React.Component {
     browserHistory.push('/');
   }
   render() {
-    console.log(this.state);
     return (
       <main className="project-page">
         <h2>{this.state.project.name}</h2>

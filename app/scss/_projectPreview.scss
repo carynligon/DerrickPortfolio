@@ -1,14 +1,18 @@
 .preview-wrapper {
+    display: block;
   .project-preview {
     .preview-image {
       background: $gray;
       background-position: center;
       background-size: cover;
+      border: 15px solid $white;
+      box-sizing: border-box;
       height: 500px;
+      transition: 0.5s all;
       width: 100%;
     }
     h3 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: lighter;
       margin: 1.7rem 0;
       padding-left: 1.7rem;
@@ -19,11 +23,37 @@
       margin-top: 0;
       padding-left: 1.7rem;
     }
+    &:hover:nth-of-type(1) .preview-image {
+        border: 15px solid $nike-green;
+    }
+    &:hover:nth-of-type(2) .preview-image {
+        border: 15px solid $brasingtons-red;
+    }
+    &:hover:nth-of-type(3) .preview-image {
+        border: 15px solid $academic-blue;
+    }
+    &:hover:nth-of-type(4) .preview-image {
+        border: 15px solid $wards-purple;
+    }
+     &:hover:nth-of-type(1) h3, &:hover:nth-of-type(1) h5 {
+        color: $nike-green;
+    }
+    &:hover:nth-of-type(2) h3, &:hover:nth-of-type(2) h5 {
+        color: $brasingtons-red;
+    }
+    &:hover:nth-of-type(3) h3, &:hover:nth-of-type(3) h5 {
+        color: $academic-blue;
+    }
+    &:hover:nth-of-type(4) h3, &:hover:nth-of-type(4) h5 {
+        color: $wards-purple;
+    }
   }
 }
 
 @media (min-width: 800px) {
   .preview-wrapper {
+    display: flex;
+    flex-wrap: wrap;
     padding: 0 1.4%;
     .project-preview {
       display: inline-block;
