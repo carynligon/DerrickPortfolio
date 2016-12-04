@@ -39,7 +39,7 @@ class Menu extends React.Component {
       </div>
       <aside className={openClassName}>
         <ul className="menu=list">
-          <li>Work</li>
+          <li><a href="/">Work</a></li>
           <li>About</li>
           <span></span>
           <li className="social"><a target="_blank" href="https://twitter.com/derrickligon">Twitter</a></li>
@@ -49,7 +49,7 @@ class Menu extends React.Component {
       </aside></div>)
     } else {
       menu = (<ul className="menu-list large-screen-nav">
-      <li>Work</li>
+      <li><a href="/">Work</a></li>
       <li>About</li>
       <li className="social"><a target="_blank" href="https://twitter.com/derrickligon">Twitter</a></li>
       <li className="social"><a target="_blank" href="https://dribbble.com/derrickligon">Dribbble</a></li>

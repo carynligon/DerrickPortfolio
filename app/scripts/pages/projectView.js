@@ -1,6 +1,7 @@
 import React from 'react';
 import { browserHistory } from 'react-router';
 import _ from 'underscore';
+import Menu from '../components/menu';
 
 import data from '../data';
 
@@ -33,6 +34,7 @@ class ProjectView extends React.Component {
   render() {
     return (
       <main className="project-page">
+        <Menu/>
         <h2>{this.state.project.name}</h2>
         <h3>{this.state.project.labels.map((label) => label + ' ')}</h3>
         <div className="project-image" style={{backgroundImage:`url(${this.state.project.images[0]})`}}>

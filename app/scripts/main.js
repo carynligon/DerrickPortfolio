@@ -1,10 +1,7 @@
 import $ from 'jquery';
 import ReactDOM from 'react-dom';
-import smoothScroll from 'smooth-scroll';
 
 import router from './router';
-
-smoothScroll.init();
 
 let backToTop = (`
     <button id="back-to-top">
@@ -13,7 +10,7 @@ let backToTop = (`
     `)
 
 function goToTop() {
-    document.scrollingElement.scrollTop = 0;
+    $("html, body").animate({ scrollTop: 0 }, 600);
 }
 
 function handleScrolling(e) {
