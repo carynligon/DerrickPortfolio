@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 import { browserHistory } from 'react-router';
 import _ from 'underscore';
 import Menu from '../components/menu';
@@ -11,6 +12,8 @@ class ProjectView extends React.Component {
     this.state = {project: data[this.props.params.projectId - 1]};
   }
   prevProject() {
+    $("html, body").animate({ scrollTop: 0 }, 200);
+    console.log('running');
     if (Number(this.props.params.projectId) === 1) {
         browserHistory.push(`/project/${data.length}`);
     } else {
@@ -18,6 +21,8 @@ class ProjectView extends React.Component {
     }
   }
   nextProject() {
+    $("html, body").animate({ scrollTop: 0 }, 200);
+    console.log('running');
     if (Number(this.props.params.projectId) === data.length) {
         browserHistory.push(`/project/1`);
     }
@@ -26,6 +31,7 @@ class ProjectView extends React.Component {
     }
   }
   goHome() {
+    $("html, body").animate({ scrollTop: 0 }, 200);
     browserHistory.push('/');
   }
   componentWillReceiveProps(nextProps) {
@@ -49,7 +55,7 @@ class ProjectView extends React.Component {
             <button onClick={this.prevProject.bind(this)} className="prev-project-btn">previous</button>
             <button onClick={this.nextProject.bind(this)} className="next-project-btn">next</button>
         </div>
-        <button className="back-all-work" onClick={this.goHome.bind(this)}>Back to all work</button>
+        <button onClick={this.goHome.bind(this)} className="back-all-work">Back to all work</button>
       </main>
     )
   }
