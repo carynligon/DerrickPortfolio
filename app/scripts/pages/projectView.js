@@ -5,6 +5,7 @@ import _ from 'underscore';
 import Menu from '../components/menu';
 
 import data from '../data';
+import IconCaret from '../svg/icon-caret';
 
 class ProjectView extends React.Component {
   constructor(props) {
@@ -55,7 +56,10 @@ class ProjectView extends React.Component {
             <button onClick={this.prevProject.bind(this)} className="prev-project-btn">previous</button>
             <button onClick={this.nextProject.bind(this)} className="next-project-btn">next</button>
         </div>
-        <button onClick={this.goHome.bind(this)} className="back-all-work">Back to all work</button>
+        <button onClick={this.goHome.bind(this)} className="back-all-work">
+                <IconCaret />
+                Back to all work
+        </button>
       </main>
     )
   }

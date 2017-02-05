@@ -93,6 +93,7 @@
   aside {
     float: right;
     padding: 15px;
+    transition: all 0.3s cubic-bezier(.25,.1,.25,1);
     ul {
       display: none;
       margin: 70px 0;

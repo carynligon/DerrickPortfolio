@@ -38,7 +38,7 @@ class Menu extends React.Component {
         <span></span>
       </div>
       <aside className={openClassName}>
-        <ul className="menu=list">
+        <ul className="menu-list">
           <li><a href="/">Work</a></li>
           <li>About</li>
           <span></span>
